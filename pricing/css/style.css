@@ -7,6 +7,15 @@
   background-color: #fff;
 }
 
+.plan-subtitle::after, .plan-subtitle::before {
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  height: 1px;
+  width: 24px;
+  background-color: #6e45e2;
+}
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -65,7 +74,7 @@ body {
 }
 
 .hero-header__logo {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .hero-header__menu {
@@ -89,11 +98,11 @@ body {
 }
 
 .hero-header__menu li {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .hero-header__menu-link {
-  padding: 0 24px 24px 24px;
+  padding: 0 20px 20px 20px;
   text-decoration: none;
   color: #fff;
 }
@@ -121,6 +130,7 @@ body {
 }
 
 .hero-text__subtitle {
+  margin-bottom: 40px;
   font-size: 14px;
 }
 
@@ -133,11 +143,8 @@ body {
 }
 
 .hero-text__title {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-size: 60.384px;
-  -webkit-transform: matrix(1.42422, 0, 0, 1.42422, 0, 0);
-          transform: matrix(1.42422, 0, 0, 1.42422, 0, 0);
+  margin: 0;
+  font-size: 86px;
 }
 
 .hero-text__descr {
@@ -175,11 +182,158 @@ body {
 
 .get-started-btn {
   padding: 15px 20px;
-  margin-left: 24px;
+  margin-left: 20px;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
   border: 1px solid #fff;
   border-radius: 50px;
+}
+
+.plan {
+  padding: 120px 0;
+  text-align: center;
+  background-color: #f9fafc;
+}
+
+.plan-subtitle {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2.286;
+  color: #9fa4af;
+}
+
+.plan-subtitle::after {
+  margin-left: 19px;
+}
+
+.plan-subtitle::before {
+  margin-right: 19px;
+}
+
+.plan-title {
+  margin: 0;
+  font-size: 60px;
+  color: #4f4f6f;
+}
+
+.plan-descr {
+  max-width: 380px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #9fa4af;
+}
+
+.plan-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.plan-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 440px;
+  padding: 65px 0;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.plan-card:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 81.88px 10.12px rgba(204, 204, 223, 0.71);
+          box-shadow: 0px 0px 81.88px 10.12px rgba(204, 204, 223, 0.71);
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+.plan-card__image {
+  min-height: 113px;
+  margin-bottom: 50px;
+}
+
+.plan-card__subtitle {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 2.286;
+  color: #9fa4af;
+}
+
+.plan-card__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  font-size: 60px;
+  color: #4f4f6f;
+}
+
+.plan-card__dollar {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-right: 3px;
+  font-size: 16px;
+  line-height: 2.7;
+  color: #4f4f6f;
+}
+
+.plan-card__month {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.plan-card__descr {
+  max-width: 300px;
+  margin-bottom: 50px;
+  line-height: 1.75;
+  color: #9fa4af;
+}
+
+.plan-card__btn {
+  padding: 0 50px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 2.667;
+  color: #c2c9db;
+  border: 1px solid #d7dbe8;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5);
+          box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5);
+}
+
+.plan-card__btn:hover {
+  cursor: pointer;
+  background-color: #6e45e2;
+  color: #fff;
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
 }
 /*# sourceMappingURL=style.css.map */
