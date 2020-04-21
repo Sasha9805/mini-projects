@@ -11,7 +11,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+  <ul class="m-menu">
+    <li class="close-menu">&times;</li>
+    <li><a class="hero-header__menu-link" href="#">Home</a></li>
+    <li><a class="hero-header__menu-link" href="#">Why MISOCIAL</a></li>
+    <li><a class="hero-header__menu-link" href="#">Features</a></li>
+    <li><a class="hero-header__menu-link" href="#">Articles</a></li>
+    <li><a class="hero-header__menu-link" href="#">Pricing</a></li>
+    <li><a class="hero-header__menu-link get-started-btn" href="#">get started</a></li>
+  </ul>
   <header class="hero">
     <div class="hero-overlay"></div>
     <!-- /.hero-overlay -->
@@ -20,6 +28,9 @@
         <img src="img/symbol.png" alt="logo">
       </div>
       <!-- /.hero-header__logo -->
+      <a href="#" class="m-menu-link">
+        <i class="fa fa-bars"></i>
+      </a>
       <nav class="hero-header__menu">
         <ul>
           <li><a class="hero-header__menu-link" href="#">Home</a></li>
@@ -142,5 +153,28 @@
     <!-- /.footer-wrap -->
   </footer>
 
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script>
+    $(function() {
+      let link = $('.m-menu-link');
+      let close = $('.close-menu');
+      let menu = $('.m-menu');
+      link.on('click', function(event) {
+        event.preventDefault();
+        menu.toggleClass('m-menu__active');
+      });
+      close.on('click', function(event) {
+        event.preventDefault();
+        menu.toggleClass('m-menu__active');
+      })
+    });
+  </script>
 </body>
 </html>
